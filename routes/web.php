@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\admin\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('admin.layout.master');
 });
+Route::get('/show_users', [AuthController::class,'listAll']
+)->name('show_users');
+
