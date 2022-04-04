@@ -1,6 +1,13 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\ContuctController;
+use App\Http\Controllers\CvController;
+use App\Http\Controllers\ServicesController;
+
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +27,7 @@ Route::get('/', function () {
 
 Route::get('/index',[HomeController::class,'showIndex']);
 Route::get('/career',[CareerController::class,'showCareer']);
+Route::get('/companies',[CompaniesController::class,'showCompanies']);
+Route::get('/contuct',[ContuctController::class,'showContuct']);
+Route::get('/cv',[CvController::class,'showCv']);
+Route::get('/service',[ServicesController::class,'showServices']);
