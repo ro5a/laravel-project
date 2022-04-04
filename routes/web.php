@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/index',[HomeController::class,'showIndex']);
+Route::get('/career',[CareerController::class,'showCareer']);
