@@ -1,5 +1,13 @@
 <?php
 use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\CareerAdminController;
+use App\Http\Controllers\admin\CategoryAdminController;
+use App\Http\Controllers\admin\CompanyAdminController;
+use App\Http\Controllers\admin\ServiceAdminController;
+use App\Http\Controllers\admin\OfferAdminController;
+
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +29,14 @@ Route::get('/', function () {
 });
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
+Route::get('/show_careers', [CareerAdminController::class,'listAll']
+)->name('show_careers');
+Route::get('/show_categories', [CategoryAdminController::class,'listAll']
+)->name('show_categories');
+Route::get('/show_companies', [CompanyAdminController::class,'listAll']
+)->name('show_companies');
+Route::get('/show_services', [ServiceAdminController::class,'listAll']
+)->name('show_services');
+Route::get('/show_offers', [OfferAdminController::class,'listAll']
+)->name('show_offers');
 
