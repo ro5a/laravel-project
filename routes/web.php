@@ -27,6 +27,9 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('admin.layout.master');
 });
+//users route
+Route::get('/add_user', [AuthController::class,'insert']
+)->name('add_user');
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
 //career route
