@@ -21,11 +21,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/index',[HomeController::class,'showIndex']);
+Route::get('/',[HomeController::class,'showIndex']);
 Route::get('/career',[CareerController::class,'showCareer']);
 Route::get('/companies',[CompaniesController::class,'showCompanies']);
 Route::get('/contuct',[ContuctController::class,'showContuct']);
