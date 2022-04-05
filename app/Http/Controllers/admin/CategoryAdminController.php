@@ -10,4 +10,7 @@ class CategoryAdminController extends Controller
     public function listAll(){
         return view('admin.categories');
     }
+    public function create(){
+        return view('admin.add_category');
+    }
 }

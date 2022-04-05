@@ -10,4 +10,7 @@ class ServiceAdminController extends Controller
     public function listAll(){
         return view('admin.services');
     }
+    public function create(){
+        return view('admin.add_service);
+    }
 }

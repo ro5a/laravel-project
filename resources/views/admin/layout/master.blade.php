@@ -178,13 +178,13 @@
       <span class="menu-header-text">Users</span>
     </li>
     <li class="menu-item">
-      <a href="app-calendar.html" class="menu-link">
+      <a href="/add_users" class="menu-link">
         <i class="menu-icon tf-icons bx bx-calendar"></i>
         <div data-i18n="Add user">Add user</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
+      <a href="/show_users" class="menu-link menu-toggle">
         <i class='menu-icon tf-icons bx bx-food-menu'></i>
         <div data-i18n="list users">list users</div>
       </a>
@@ -192,26 +192,21 @@
     </li>
    
      
-    <li class="menu-item active">
-      <a href="modal-examples.html" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-window-open"></i>
-        <div data-i18n="Modal Examples">Modal Examples</div>
-      </a>
-    </li>
+   
 
-    <!-- Components -->
+   
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Careers</span></li>
-    <!-- Cards -->
+   
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link">
+      <a href="/add_career" class="menu-link">
         <i class="menu-icon tf-icons bx bx-collection"></i>
         <div data-i18n="Add Career">Add Career</div>
       </a>
      
     </li>
-    <!-- User interface -->
+  
     <li class="menu-item">
-      <a href="javascript:void(0)" class="menu-link ">
+      <a href="/show_careers" class="menu-link ">
         <i class="menu-icon tf-icons bx bx-box"></i>
         <div data-i18n="list Career">list Career</div>
       </a>
@@ -220,18 +215,18 @@
 
    
 
-    <!-- Forms & Tables -->
+
     <li class="menu-header small text-uppercase"><span class="menu-header-text">adminstrator companies</span></li>
-    <!-- Forms -->
+   
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link ">
+      <a href="/add_company" class="menu-link ">
         <i class="menu-icon tf-icons bx bx-detail"></i>
         <div data-i18n="add company">add company</div>
       </a>
       
     </li>
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link ">
+      <a href="/show_companies" class="menu-link ">
         <i class="menu-icon tf-icons bx bx-detail"></i>
         <div data-i18n="list companies">list companies</div>
       </a>
@@ -240,34 +235,34 @@
     
     
 
-    <!-- Charts & Maps -->
+    
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">services</span>
     </li>
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link ">
+      <a href="/add_service" class="menu-link ">
         <i class="menu-icon tf-icons bx bx-chart"></i>
         <div data-i18n="add service">add service</div>
       </a>
       
     </li>
     <li class="menu-item">
-      <a href="maps-leaflet.html" class="menu-link">
+      <a href="/show_services" class="menu-link">
         <i class="menu-icon tf-icons bx bx-map-alt"></i>
         <div data-i18n="list services">list services</div>
       </a>
     </li>
 
-    <!-- Misc -->
+    
     <li class="menu-header small text-uppercase"><span class="menu-header-text">categories</span></li>
     <li class="menu-item">
-      <a href="https://themeselection.com/support/" target="_blank" class="menu-link">
+      <a href="/add_category" target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-support"></i>
         <div data-i18n="add category"> add category</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/" target="_blank" class="menu-link">
+      <a href="/show_categories" target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-file"></i>
         <div data-i18n="list categories">list categories</div>
       </a>
@@ -275,20 +270,20 @@
     <li class="menu-header small text-uppercase"><span class="menu-header-text">favorites</span></li>
     
     <li class="menu-item">
-      <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/" target="_blank" class="menu-link">
+      <a href="#" target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-file"></i>
         <div data-i18n="list favorites">list favorites</div>
       </a>
     </li>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">offers</span></li>
     <li class="menu-item">
-      <a href="https://themeselection.com/support/" target="_blank" class="menu-link">
+      <a href="/add_offer" target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-support"></i>
         <div data-i18n=" add offer"> add offer</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/" target="_blank" class="menu-link">
+      <a href="/show_offers" target="_blank" class="menu-link">
         <i class="menu-icon tf-icons bx bx-file"></i>
         <div data-i18n="list offers">list offers</div>
       </a>

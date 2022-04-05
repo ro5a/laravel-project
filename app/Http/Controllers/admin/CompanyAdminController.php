@@ -10,4 +10,7 @@ class CompanyAdminController extends Controller
     public function listAll(){
         return view('admin.companies');
     }
+    public function create(){
+        return view('admin.add_company');
+    }
 }

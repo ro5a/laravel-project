@@ -10,4 +10,8 @@ class OfferAdminController extends Controller
     public function listAll(){
         return view('admin.offers');
     }
+    public function create(){
+        return view('admin.add_offer');
+    }
+
 }
