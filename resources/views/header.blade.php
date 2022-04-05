@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-              <a class=" ms-5 navbar-brand navbar-left" href="dashboard.html" style="color: #FFC312;font-weight: bolder;font-size: 30px;">
+              <a class=" ms-5 navbar-brand navbar-left" href="dashboard" style="color: #FFC312;font-weight: bolder;font-size: 30px;">
                Jobs
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,21 +27,21 @@
                     <a class="nav-link active" aria-current="page"  style="color: #fff;" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: #fff;" href="career.html">Careers</a>
+                    <a class="nav-link" style="color: #fff;" href="career">Careers</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: #fff;" href="services.html">Our services</a>
+                    <a class="nav-link" style="color: #fff;" href="services">Our services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: #fff;" href="companies.html">Companies</a>
+                    <a class="nav-link" style="color: #fff;" href="companies">Companies</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: #fff;" href="CV.html">CV</a>
+                    <a class="nav-link" style="color: #fff;" href="CV">CV</a>
                   </li>
 
                 
                   <li class="nav-item">
-                    <a class="nav-link"  style="color: #fff;" href="contuct.html">Contuct us</a>
+                    <a class="nav-link"  style="color: #fff;" href="contuct">Contuct us</a>
                   </li>
                   
                  
