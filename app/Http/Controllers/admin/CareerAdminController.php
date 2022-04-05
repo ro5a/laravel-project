@@ -10,4 +10,8 @@ class CareerAdminController extends Controller
     public function listAll(){
         return view('admin.careers');
     }
+    public function create(){
+        return view('admin.add_career');
+    }
+
 }

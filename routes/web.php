@@ -29,8 +29,13 @@ Route::get('/', function () {
 });
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
+//career route
 Route::get('/show_careers', [CareerAdminController::class,'listAll']
 )->name('show_careers');
+Route::get('/add_career', [CareerAdminController::class,'create']
+)->name('add_career');
+
+///
 Route::get('/show_categories', [CategoryAdminController::class,'listAll']
 )->name('show_categories');
 Route::get('/show_companies', [CompanyAdminController::class,'listAll']
