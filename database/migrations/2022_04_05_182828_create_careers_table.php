@@ -15,6 +15,14 @@ class CreateCareersTable extends Migration
     {
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->binary('photo');
+            $table->integer('salary')->nullable(); 
+            $table->foreignId('user_id');
+            $table->foreignId('category_id');
+            $table->foreignId('sub_id');
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
         });
     }
