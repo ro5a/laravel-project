@@ -5,12 +5,13 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AuthController extends Controller
+class CareerAdminController extends Controller
 {
-    public function showLogin(){
-        return view('admin.login');
+    public function listAll(){
+        return view('admin.careers');
     }
     public function create(){
-        return view('admin.users.add_user');
+        return view('admin.add_career');
     }
+
 }

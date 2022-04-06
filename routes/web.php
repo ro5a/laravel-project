@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CompaniesController;
@@ -9,9 +9,19 @@ use App\Http\Controllers\ServicesController;
 
 
 
-=======
+
 use App\Http\Controllers\admin\AuthController;
->>>>>>> Views_organize
+
+
+use App\Http\Controllers\admin\CareerAdminController;
+use App\Http\Controllers\admin\CategoryAdminController;
+use App\Http\Controllers\admin\CompanyAdminController;
+use App\Http\Controllers\admin\ServiceAdminController;
+use App\Http\Controllers\admin\OfferAdminController;
+
+
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,25 +35,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/',[HomeController::class,'showIndex']);
+Route::get('/index',[HomeController::class,'showIndex']);
 Route::get('/career',[CareerController::class,'showCareer']);
 Route::get('/companies',[CompaniesController::class,'showCompanies']);
 Route::get('/contuct',[ContuctController::class,'showContuct']);
 Route::get('/cv',[CvController::class,'showCv']);
 Route::get('/service',[ServicesController::class,'showServices']);
-=======
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/', function () {
     return view('admin.layout.master');
 });
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
+Route::get('/add_users', [AuthController::class,'create']
+)->name('add_users');
+//career route
+Route::get('/show_careers', [CareerAdminController::class,'listAll']
+)->name('show_careers');
+Route::get('/add_career', [CareerAdminController::class,'create']
+)->name('add_career');
 
->>>>>>> Views_organize
+/// category route 
+Route::get('/show_categories', [CategoryAdminController::class,'listAll']
+)->name('show_categories');
+Route::get('/add_category', [CategoryAdminController::class,'create']
+)->name('add_category');
+//company route
+Route::get('/show_companies', [CompanyAdminController::class,'listAll']
+)->name('show_companies');
+Route::get('/add_company', [CompanyAdminController::class,'create']
+)->name('add_company');
+//service route
+Route::get('/show_services', [ServiceAdminController::class,'listAll']
+)->name('show_services');
+Route::get('/add_service', [ServiceAdminController::class,'create']
+)->name('add_service');
+//offer route
+Route::get('/show_offers', [OfferAdminController::class,'listAll']
+)->name('show_offers');
+Route::get('/add_offer', [OfferAdminController::class,'create']
+)->name('add_offer');
+
+
