@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CompaniesController;
@@ -8,6 +9,9 @@ use App\Http\Controllers\ServicesController;
 
 
 
+=======
+use App\Http\Controllers\admin\AuthController;
+>>>>>>> Views_organize
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -31,3 +36,14 @@ Route::get('/companies',[CompaniesController::class,'showCompanies']);
 Route::get('/contuct',[ContuctController::class,'showContuct']);
 Route::get('/cv',[CvController::class,'showCv']);
 Route::get('/service',[ServicesController::class,'showServices']);
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/', function () {
+    return view('admin.layout.master');
+});
+Route::get('/show_users', [AuthController::class,'listAll']
+)->name('show_users');
+
+>>>>>>> Views_organize
