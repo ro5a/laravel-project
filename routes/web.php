@@ -35,6 +35,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/index',[HomeController::class,'showIndex']);
 Route::get('/career',[CareerController::class,'showCareer']);
 Route::get('/companies',[CompaniesController::class,'showCompanies']);
@@ -42,9 +43,15 @@ Route::get('/contuct',[ContuctController::class,'showContuct']);
 Route::get('/cv',[CvController::class,'showCv']);
 Route::get('/service',[ServicesController::class,'showServices']);
 
+
+
+
 Route::get('/', function () {
     return view('admin.layout.master');
 });
+//users route
+Route::get('/add_user', [AuthController::class,'insert']
+)->name('add_user');
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
 Route::get('/add_users', [AuthController::class,'create']

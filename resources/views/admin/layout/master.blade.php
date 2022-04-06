@@ -173,30 +173,32 @@
   
   <ul class="menu-inner py-1">
    
-    <!-- Apps & Pages -->
     <li class="menu-header small text-uppercase">
       <span class="menu-header-text">Users</span>
     </li>
     <li class="menu-item">
-      <a href="/add_users" class="menu-link">
+
+      <a href="/add_user" class="menu-link">
+
         <i class="menu-icon tf-icons bx bx-calendar"></i>
         <div data-i18n="Add user">Add user</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href="/show_users" class="menu-link menu-toggle">
+      <a href="/list_users" class="menu-link ">
+
         <i class='menu-icon tf-icons bx bx-food-menu'></i>
         <div data-i18n="list users">list users</div>
       </a>
     
     </li>
    
-     
-   
 
    
+
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Careers</span></li>
-   
+    
+
     <li class="menu-item">
       <a href="/add_career" class="menu-link">
         <i class="menu-icon tf-icons bx bx-collection"></i>
@@ -204,9 +206,11 @@
       </a>
      
     </li>
-  
+
+   
     <li class="menu-item">
-      <a href="/show_careers" class="menu-link ">
+      <a href="/careers" class="menu-link ">
+
         <i class="menu-icon tf-icons bx bx-box"></i>
         <div data-i18n="list Career">list Career</div>
       </a>
@@ -216,8 +220,10 @@
    
 
 
+    
     <li class="menu-header small text-uppercase"><span class="menu-header-text">adminstrator companies</span></li>
-   
+    
+
     <li class="menu-item">
       <a href="/add_company" class="menu-link ">
         <i class="menu-icon tf-icons bx bx-detail"></i>
@@ -348,42 +354,7 @@
 
         <ul class="navbar-nav flex-row align-items-center ms-auto">
           
-          <!-- Language -->
-          <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
-            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <i class='flag-icon flag-icon-us flag-icon-squared rounded-circle fs-3 me-1'></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="en">
-                  <i class="flag-icon flag-icon-us flag-icon-squared rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">English</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
-                  <i class="flag-icon flag-icon-fr flag-icon-squared rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">France</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="de">
-                  <i class="flag-icon flag-icon-de flag-icon-squared rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">German</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
-                  <i class="flag-icon flag-icon-pt flag-icon-squared rounded-circle fs-4 me-1"></i>
-                  <span class="align-middle">Portuguese</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--/ Language -->
-
-
-          
+         
 
           <!-- Style Switcher -->
           <li class="nav-item me-2 me-xl-0">

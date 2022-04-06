@@ -13,4 +13,7 @@ class AuthController extends Controller
     public function create(){
         return view('admin.users.add_user');
     }
+    public function insert(){
+        return view('admin.users.add_user');
+    }
 }
