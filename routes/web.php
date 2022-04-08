@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\AuthController;
 
 
 use App\Http\Controllers\admin\CareerAdminController;
+
 use App\Http\Controllers\admin\CategoryAdminController;
 use App\Http\Controllers\admin\CompanyAdminController;
 use App\Http\Controllers\admin\ServiceAdminController;
@@ -46,12 +47,13 @@ Route::get('/service',[ServicesController::class,'showServices']);
 
 
 
-Route::get('/', function () {
-    return view('admin.layout.master');
-});
+// Route::get('/', function () {
+//     return view('admin.layout.master');
+// });
 //users route
-Route::get('/add_user', [AuthController::class,'insert']
+Route::get('/', [AuthController::class,'showLogin']
 )->name('add_user');
+Route::post('/show_users',[AuthController::class,'login'])->name('show_users');
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
 Route::get('/add_users', [AuthController::class,'create']
@@ -65,8 +67,10 @@ Route::get('/add_career', [CareerAdminController::class,'create']
 /// category route 
 Route::get('/show_categories', [CategoryAdminController::class,'listAll']
 )->name('show_categories');
-Route::get('/add_category', [CategoryAdminController::class,'create']
-)->name('add_category');
+Route::get('/save_category', [CategoryAdminController::class,'create']
+)->name('save_category');
+Route::get('/show_cat/{id}', [CategoryAdminController::class,'show']
+)->name('show_cat');
 //company route
 Route::get('/show_companies', [CompanyAdminController::class,'listAll']
 )->name('show_companies');
