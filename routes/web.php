@@ -54,6 +54,9 @@ Route::get('/service',[ServicesController::class,'showServices']);
 Route::get('/', [AuthController::class,'showLogin']
 )->name('add_user');
 Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
+Route::get('/create_user',[AuthController::class,'createUser'])->name('create_user');
+Route::get('/save_user',[AuthController::class,'register'])->name('save_user');
+
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
 Route::get('/add_users', [AuthController::class,'create']
