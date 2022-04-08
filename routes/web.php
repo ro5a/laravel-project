@@ -53,7 +53,7 @@ Route::get('/service',[ServicesController::class,'showServices']);
 //users route
 Route::get('/', [AuthController::class,'showLogin']
 )->name('add_user');
-Route::post('/show_users',[AuthController::class,'login'])->name('show_users');
+Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
 Route::get('/show_users', [AuthController::class,'listAll']
 )->name('show_users');
 Route::get('/add_users', [AuthController::class,'create']

@@ -160,8 +160,15 @@
           <!-- /Logo -->
           <h4 class="mb-2">Login</h4>
           <p class="mb-4">Please sign-in to your account and start the adventure</p>
+          @if ($errors->any())
+          @foreach ($errors->all() as $err )
+         <p class="alert alert-danger">{{ $err }}</p>
+            
+          @endforeach
+            
+          @endif
 
-          <form id="formAuthentication" class="mb-3" action="{{ route('show_users') }}" method="POST" enctype="multipart/form-data">
+          <form id="formAuthentication" class="mb-3" action="{{ route('do_login') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
               <label for="email" class="form-label">Email or Username</label>
