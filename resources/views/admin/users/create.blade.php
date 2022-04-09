@@ -172,12 +172,12 @@
           <form id="formAuthentication" class="mb-3" action="{{ route('save_user') }}" method="POST" >
             @csrf 
             <div class="mb-3">
-              <label for="username" class="form-label">full name</label>
-              <input type="text" class="form-control"  name="full_name" placeholder="Enter your full name" autofocus>
+              <label for="name" class="form-label">user name</label>
+              <input type="text" value="{{ old('name') }}" class="form-control"  name="name" placeholder="Enter your full name" autofocus>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control"  name="u_email" placeholder="Enter your email">
+              <input type="text" value="{{ old('email') }}" class="form-control"  name="email" placeholder="Enter your email">
             </div>
             <div class="mb-3 form-password-toggle">
               <label class="form-label" for="password">Password</label>
@@ -210,7 +210,7 @@
 
           <p class="text-center">
             <span>Already have an account?</span>
-            <a href="auth-login-basic.html">
+            <a href="/">
               <span>Sign in instead</span>
             </a>
           </p>

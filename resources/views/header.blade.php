@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
             <div class="container-fluid">
-              <a class=" ms-5 navbar-brand navbar-left" href="dashboard" style="color: #FFC312;font-weight: bolder;font-size: 30px;">
+              <a class=" ms-5 navbar-brand navbar-left" href="/create_user" style="color: #FFC312;font-weight: bolder;font-size: 30px;">
                Jobs
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

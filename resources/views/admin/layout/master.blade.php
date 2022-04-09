@@ -178,14 +178,14 @@
     </li>
     <li class="menu-item">
 
-      <a href="/add_user" class="menu-link">
+      <a href="/add_users" class="menu-link">
 
         <i class="menu-icon tf-icons bx bx-calendar"></i>
         <div data-i18n="Add user">Add user</div>
       </a>
     </li>
     <li class="menu-item">
-      <a href="/list_users" class="menu-link ">
+      <a href="/show_users" class="menu-link ">
 
         <i class='menu-icon tf-icons bx bx-food-menu'></i>
         <div data-i18n="list users">list users</div>
@@ -209,7 +209,7 @@
 
    
     <li class="menu-item">
-      <a href="/careers" class="menu-link ">
+      <a href="/show_careers" class="menu-link ">
 
         <i class="menu-icon tf-icons bx bx-box"></i>
         <div data-i18n="list Career">list Career</div>

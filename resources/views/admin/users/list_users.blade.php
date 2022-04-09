@@ -1,24 +1,25 @@
 @extends('admin.layout.master')
 @section('content')
 <h4 class="fw-bold py-3 mb-4">
-  <span class="text-muted fw-light">Tables /</span> Basic Tables
+  <span class="text-muted fw-light">Tables /</span> users
 </h4>
 
 <!-- Basic Bootstrap Table -->
 <div class="card">
-  <h5 class="card-header">Table Basic</h5>
+  <h5 class="card-header">Table user</h5>
   <div class="table-responsive text-nowrap">
     <table class="table">
       <thead>
         <tr>
-          <th>Project</th>
-          <th>Client</th>
-          <th>Users</th>
+          <th>name</th>
+          <th>email</th>
+          <th>profile</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody class="table-border-bottom-0">
+        
         <tr>
           <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
           <td>Albert Cook</td>

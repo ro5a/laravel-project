@@ -53,6 +53,7 @@ Route::get('/service',[ServicesController::class,'showServices']);
 //users route
 Route::get('/', [AuthController::class,'showLogin']
 )->name('add_user');
+
 Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
 Route::get('/create_user',[AuthController::class,'createUser'])->name('create_user');
 Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
@@ -66,6 +67,7 @@ Route::get('/show_careers', [CareerAdminController::class,'listAll']
 )->name('show_careers');
 Route::get('/add_career', [CareerAdminController::class,'create']
 )->name('add_career');
+Route::post('/save_career',[CareerAdminController::class,'addCareer'])->name('save_career');
 
 /// category route 
 Route::get('/show_categories', [CategoryAdminController::class,'listAll']
