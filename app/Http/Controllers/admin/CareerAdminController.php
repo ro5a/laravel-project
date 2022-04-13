@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Validator;
 class CareerAdminController extends Controller
 {
     public function listAll(){
-        return view('admin.careers');
+        $careers= Career::all();
+        return view('admin.careers')->with('allCareers',$careers);
     }
     public function create(){
         return view('admin.add_career');

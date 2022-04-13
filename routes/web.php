@@ -51,8 +51,8 @@ Route::get('/service',[ServicesController::class,'showServices']);
 //     return view('admin.layout.master');
 // });
 //users route
-Route::get('/', [AuthController::class,'showLogin']
-)->name('add_user');
+Route::get('/login', [AuthController::class,'showLogin']
+)->name('login');
 
 Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
 Route::get('/create_user',[AuthController::class,'createUser'])->name('create_user');
