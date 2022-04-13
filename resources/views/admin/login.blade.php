@@ -160,6 +160,10 @@
           <!-- /Logo -->
           <h4 class="mb-2">Login</h4>
           <p class="mb-4">Please sign-in to your account and start the adventure</p>
+          @if(isset($message)){
+            <p class="alert alert-danger">{{ $message }}</p>
+          }
+          @endif
           @if ($errors->any())
           @foreach ($errors->all() as $err )
          <p class="alert alert-danger">{{ $err }}</p>
@@ -186,7 +190,7 @@
                 </a>
               </div>
               <div class="input-group input-group-merge">
-                <input type="password" class="form-control" name="u_password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                <input type="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>

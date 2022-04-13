@@ -8,6 +8,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -18,16 +19,16 @@ class AuthController extends Controller
     }
     public function login(Request $req){
         Validator::validate($req->all(),[
-         'email_username'=>['email','required','min:3','max:20','unique:users'],
+         'email_username'=>['email','required','min:3','max:255'],
          'password'=>['required','min:6']
         ],
         [
         'email_username.required'=>'this field is required',
-        'email_username.min'=>'can not be less than 3 letters',
-        'email_username.max'=>'can not be more than 20 letters',
-        'email_username.unique'=>'It is already exist',
-        'u_password.required'=>'password is field is required',
-        'u_password.min'=>'Password must be more than 6 characters'
+        'email_username.min'=>'email can not be less than 3 letters',
+        'email_username.max'=>'email can not be more than 20 letters',
+       
+        'password.required'=>'password  is required',
+        'password.min'=>'Password must be more than 6 characters'
 
 
         
@@ -36,11 +37,17 @@ class AuthController extends Controller
 
 
         ]); 
-       $u=new User();
-       $u->name=$req->input('email_username');
-       $u->password=$req->input('password');
-       if($u->save())
-       return redirect()->route('show_users'); 
+        if(Auth::attempt(['email'=>$req->email_username, 'password'=>$req->password])){
+            return redirect()->route('show_users');
+
+        }else{
+           return redirect()->route('login')->with(['message'=>'incorrect username or password login']);
+        }
+    //    $u=new User();
+    //    $u->name=$req->input('email_username');
+    //    $u->password=$req->input('password');
+    //    if($u->save())
+    //    return redirect()->route('show_users'); 
         
 
     }
@@ -98,12 +105,16 @@ class AuthController extends Controller
         $u=User::find(5);
         if($u->hasRole('admin')){
 
+        }else{
+
         }
     }
     public function resetPassword(){
 
     }
     public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
 
     }
 

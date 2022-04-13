@@ -56,13 +56,18 @@ Route::get('/login', [AuthController::class,'showLogin']
 )->name('login');
 
 Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
+
 Route::get('/generate_roles',[SettingsController::class,'generateRules'])->name('generate_roles');
 //************************************** */
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/show_users', [AuthController::class,'listAll']
+    )->name('show_users');
+    Route::get('/logout',[AuthController::class,'logout'])->name('logout');
+});
 Route::get('/create_user',[AuthController::class,'createUser'])->name('create_user');
 Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
 
-Route::get('/show_users', [AuthController::class,'listAll']
-)->name('show_users');
+
 Route::get('/add_users', [AuthController::class,'create']
 )->name('add_users');
 //career route
