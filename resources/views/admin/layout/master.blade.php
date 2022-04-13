@@ -160,6 +160,8 @@
 
 </span>
       <span class="app-brand-text demo menu-text fw-bolder ms-2">Jobs Dashboard</span>
+      
+     
     </a>
 
     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -169,7 +171,11 @@
 
   <div class="menu-inner-shadow"></div>
 
-  
+  <ul class="menu-inner py-1">
+   
+    <li class="menu-header small text-uppercase">
+     <a href="/index"> <span class="menu-header-text fw-bolder">go to home</span></a>
+    </li>
   
   <ul class="menu-inner py-1">
    

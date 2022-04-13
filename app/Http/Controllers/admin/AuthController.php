@@ -83,7 +83,10 @@ class AuthController extends Controller
 
     }
     public function listAll(){
-        return view('admin.users.list_users');
+        $users= User::all();
+        // return response($users);
+        return view('admin.users.list_users')
+        ->with('allUsers',$users);
     }
     public function resetPassword(){
 
