@@ -160,8 +160,8 @@
           <!-- /Logo -->
           <h4 class="mb-2">Login</h4>
           <p class="mb-4">Please sign-in to your account and start the adventure</p>
-          @if(isset($message)){
-            <p class="alert alert-danger">{{ $message }}</p>
+          @if(session()->has('message')){
+            <p class="alert alert-danger">{{ session()->get('message') }}</p>
           }
           @endif
           @if ($errors->any())

@@ -37,12 +37,15 @@ class AuthController extends Controller
 
 
         ]); 
-        if(Auth::attempt(['email'=>$req->email_username, 'password'=>$req->password])){
-            return redirect()->route('show_users');
-
-        }else{
-           return redirect()->route('login')->with(['message'=>'incorrect username or password login']);
+        if(! auth()->attempt(request(['email', 'password'])))
+        {
+            return back()->withErrors([
+                'message' => 'Please check your login and try again.'
+            ]);
         }
+    
+        return redirect()->route('show_users');
+    
     //    $u=new User();
     //    $u->name=$req->input('email_username');
     //    $u->password=$req->input('password');
