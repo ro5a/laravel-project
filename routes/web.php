@@ -19,6 +19,7 @@ use App\Http\Controllers\admin\CategoryAdminController;
 use App\Http\Controllers\admin\CompanyAdminController;
 use App\Http\Controllers\admin\ServiceAdminController;
 use App\Http\Controllers\admin\OfferAdminController;
+use App\Http\Controllers\admin\SettingsController;
 
 
 
@@ -55,6 +56,8 @@ Route::get('/login', [AuthController::class,'showLogin']
 )->name('login');
 
 Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
+Route::get('/generate_roles',[SettingsController::class,'generateRules'])->name('generate_roles');
+//************************************** */
 Route::get('/create_user',[AuthController::class,'createUser'])->name('create_user');
 Route::post('/save_user',[AuthController::class,'register'])->name('save_user');
 

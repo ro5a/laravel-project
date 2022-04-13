@@ -78,8 +78,13 @@ class AuthController extends Controller
            $u->name=$req->name;
            $u->password=Hash::make($req->password);
            $u->email=$req->email;
-           if($u->save())
-           return redirect()->route('show_users')->with(['success'=>'user created successful']);
+           
+           if($u->save()){
+            $u->attachRole('admin');
+            return redirect()->route('show_users')->with(['success'=>'user created successful']);
+
+
+           }
            return back()->with(['error'=>'can not create user']);
 
     }
@@ -88,6 +93,12 @@ class AuthController extends Controller
         // return response($users);
         return view('admin.users.list_users')
         ->with('allUsers',$users);
+    }
+    public function editUser(){
+        $u=User::find(5);
+        if($u->hasRole('admin')){
+
+        }
     }
     public function resetPassword(){
 
