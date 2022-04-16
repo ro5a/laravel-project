@@ -14,18 +14,26 @@ class AuthController extends Controller
 {
    
     public function showLogin(){
-        
+        if(Auth::check())
+        return redirect()->route($this->checkRole());
+        else
         return view('admin.login');
+    }
+    public function checkRole(){
+        if(Auth::user()->hasRole('admin'))
+        return 'show_users';
+        else 
+        return'index';
     }
     public function login(Request $req){
         Validator::validate($req->all(),[
-         'email_username'=>['email','required','min:3','max:255'],
+         'email'=>['email','required','min:3','max:255'],
          'password'=>['required','min:6']
         ],
         [
-        'email_username.required'=>'this field is required',
-        'email_username.min'=>'email can not be less than 3 letters',
-        'email_username.max'=>'email can not be more than 20 letters',
+        'email.required'=>'this field is required',
+        'email.min'=>'email can not be less than 3 letters',
+        'email.max'=>'email can not be more than 20 letters',
        
         'password.required'=>'password  is required',
         'password.min'=>'Password must be more than 6 characters'
@@ -37,14 +45,17 @@ class AuthController extends Controller
 
 
         ]); 
-        if(Auth::attempt(['password' => $req['password'], 'email' => $req['email_username']])) 
+        if(Auth::attempt(['password' => $req['password'], 'email' => $req['email']])) 
         {
+         if(Auth::user()->hasRole('admin'))   
          return redirect()->route('show_users');
+         else 
+         return redirect()->route('index');
         }
         return redirect()->back();
     
     //    $u=new User();
-    //    $u->name=$req->input('email_username');
+    //    $u->name=$req->input('email');
     //    $u->password=$req->input('password');
     //    if($u->save())
     //    return redirect()->route('show_users'); 
@@ -97,7 +108,7 @@ class AuthController extends Controller
     }
     public function listAll(){
         $users= User::all();
-        // return response($users);
+         
         return view('admin.users.list_users')
         ->with('allUsers',$users);
     }

@@ -176,7 +176,7 @@
             @csrf
             <div class="mb-3">
               <label for="email" class="form-label">Email or Username</label>
-              <input type="text" class="form-control"  name="email_username" placeholder="Enter your email or username" autofocus>
+              <input type="text" class="form-control"  name="email" placeholder="Enter your email or username" autofocus>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">choose profile</label>

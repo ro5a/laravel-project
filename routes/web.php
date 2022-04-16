@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/index',[HomeController::class,'showIndex']);
+Route::get('/index',[HomeController::class,'showIndex'])->name('index');
 Route::get('/career',[CareerController::class,'showCareer']);
 Route::get('/companies',[CompaniesController::class,'showCompanies']);
 Route::get('/contuct',[ContuctController::class,'showContuct']);
@@ -60,7 +60,7 @@ Route::post('/do_login',[AuthController::class,'login'])->name('do_login');
 Route::get('/generate_roles',[SettingsController::class,'generateRules'])->name('generate_roles');
 //************************************** */
 Route::group(['middleware'=>'auth'], function(){
-    Route::get('/show_users', [AuthController::class,'listAll']
+    Route::middleware('role:admin')->get('/show_users', [AuthController::class,'listAll']
     )->name('show_users');
     Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 });
